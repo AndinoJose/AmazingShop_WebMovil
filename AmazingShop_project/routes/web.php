@@ -34,6 +34,17 @@ Route::get('admin/estadistica', [App\Http\Controllers\estadisticascontroller::cl
 Route::get('admin/agregarestadistica', [App\Http\Controllers\estadisticascontroller::class, 'agregarestadistica'])->name('agregarestadistica');
 
 
+//RUTAS COMPRAS Y VENTAS
+Route::get('admin/Compras', [App\Http\Controllers\comprascontroller::class, 'index'])->name('Compras');
+
+Route::get('admin/Ventas', [App\Http\Controllers\ventascontroller::class, 'index'])->name('Ventas');
+
+Route::get('admin/agregarventas', [App\Http\Controllers\ventascontroller::class, 'create'])->name('agregarventas');
+
+Route::get('admin/agregarcompras', [App\Http\Controllers\comprascontroller::class, 'create'])->name('agregarcompras');
+
+Route::post('admin/agregarventas', [App\Http\Controllers\ventascontroller::class, 'store'])->name('store');
+
 
 
 
